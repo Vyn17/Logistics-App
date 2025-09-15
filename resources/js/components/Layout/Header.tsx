@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from '@inertiajs/react';
-import { Bars3Icon, XMarkIcon, TruckIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 
 interface HeaderProps {
   user?: any;
@@ -11,10 +11,10 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
 
   const navigation = [
     { name: 'Beranda', href: '/' },
-    { name: 'Layanan', href: '/services' },
-    { name: 'Cara Kerja', href: '/how-it-works' },
-    { name: 'Tentang Kami', href: '/about' },
-    { name: 'Kontak', href: '/contact' },
+    { name: 'Kategori', href: '/categories' },
+    { name: 'Produk', href: '/products' },
+    { name: 'Promo', href: '/deals' },
+    { name: 'Bantuan', href: '/help' },
   ];
 
   return (
@@ -22,8 +22,8 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center">
-            <TruckIcon className="h-8 w-8 text-blue-600" />
-            <span className="ml-2 text-xl font-bold text-gray-900">LogisMarket</span>
+            <ShoppingBagIcon className="h-8 w-8 text-purple-600" />
+            <span className="ml-2 text-xl font-bold text-gray-900">LogisMart</span>
           </Link>
         </div>
         
@@ -96,8 +96,8 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
           <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5 flex items-center">
-                <TruckIcon className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-xl font-bold text-gray-900">LogisMarket</span>
+                <ShoppingBagIcon className="h-8 w-8 text-purple-600" />
+                <span className="ml-2 text-xl font-bold text-gray-900">LogisMart</span>
               </Link>
               <button
                 type="button"

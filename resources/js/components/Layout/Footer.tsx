@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '@inertiajs/react';
-import { TruckIcon } from '@heroicons/react/24/outline';
+import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 
 const Footer: React.FC = () => {
   const footerNavigation = {
@@ -8,19 +8,19 @@ const Footer: React.FC = () => {
       { name: 'Tentang Kami', href: '/about' },
       { name: 'Karir', href: '/careers' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Berita', href: '/news' },
+      { name: 'Investor', href: '/investor' },
     ],
-    services: [
-      { name: 'Pengiriman Reguler', href: '/services/regular' },
-      { name: 'Pengiriman Express', href: '/services/express' },
-      { name: 'Pengiriman Same Day', href: '/services/same-day' },
-      { name: 'Pengiriman Cargo', href: '/services/cargo' },
+    categories: [
+      { name: 'Elektronik', href: '/categories/electronics' },
+      { name: 'Fashion', href: '/categories/fashion' },
+      { name: 'Rumah & Taman', href: '/categories/home' },
+      { name: 'Kecantikan', href: '/categories/beauty' },
     ],
     support: [
       { name: 'Pusat Bantuan', href: '/help' },
       { name: 'Kontak Kami', href: '/contact' },
       { name: 'FAQ', href: '/faq' },
-      { name: 'Lacak Paket', href: '/tracking' },
+      { name: 'Lacak Pesanan', href: '/tracking' },
     ],
     legal: [
       { name: 'Syarat & Ketentuan', href: '/terms' },
@@ -39,12 +39,12 @@ const Footer: React.FC = () => {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <div className="flex items-center">
-              <TruckIcon className="h-8 w-8 text-blue-400" />
-              <span className="ml-2 text-2xl font-bold text-white">LogisMarket</span>
+              <ShoppingBagIcon className="h-8 w-8 text-purple-400" />
+              <span className="ml-2 text-2xl font-bold text-white">LogisMart</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">
-              Marketplace jasa pengiriman logistik terpercaya yang menghubungkan Anda dengan berbagai vendor terbaik di Indonesia. 
-              Solusi lengkap untuk kebutuhan pengiriman bisnis dan personal Anda.
+              Marketplace terpercaya untuk semua kebutuhan Anda. Temukan jutaan produk berkualitas dengan harga terbaik 
+              dari ribuan seller terpercaya di seluruh Indonesia.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-gray-300">
@@ -88,9 +88,9 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Layanan</h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">Kategori</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {footerNavigation.services.map((item) => (
+                  {footerNavigation.categories.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
                         {item.name}
